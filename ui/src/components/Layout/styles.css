@@ -1,0 +1,211 @@
+/* Main Content */
+.main-content {
+  min-height: calc(100vh - 143px);
+}
+
+/* Main Container */
+.main-container {
+  flex: 0 0 auto;
+  position: relative;
+  align-items: flex-start;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 80px 160px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.main-container.verify-container {
+  height: calc(100vh - 110px);
+  justify-content: center;
+}
+
+@media screen and (max-width: 767px) {
+  .main-container {
+    padding: 20px;
+    flex-direction: column;
+    width: 100%;
+    align-self: stretch;
+    gap: 10px;
+  }
+}
+
+/* Section Title */
+.section-title {
+  margin: 0;
+  font-size: 32px !important;
+}
+
+/* White Box */
+.white-box {
+  flex: 0 0 auto;
+  position: relative;
+  align-items: flex-start;
+  align-self: stretch;
+  border: 2px solid;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 76px;
+  padding: 35px;
+  width: 100%;
+}
+
+.white-box-content {
+  width: 100%;
+  text-align: left;
+}
+
+.white-box .verify-box {
+  padding: 50px 20px 76px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.block-title-box {
+  margin-bottom: 30px;
+}
+
+.block-title {
+  font-size: 25px !important;
+  text-align: center;
+}
+
+.block-subtitle {
+  font-size: 18px !important;
+}
+
+/* App Header */
+.app-header {
+  max-height: 200vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  background-color: #e2e2e2;
+  color: black;
+}
+
+.app-header-container {
+  width: 100%;
+  max-width: 1440px;
+  padding: 34px 30px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.app-header-container .logo img {
+  display: block;
+}
+
+/* App Footer */
+div.ant-layout footer.app-footer {
+  text-align: center;
+  color: #fff;
+  height: 144px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+div.ant-layout footer.app-footer p a {
+  color: white;
+  text-decoration: underline;
+  margin: 0 4px;
+}
+
+div.ant-layout footer.app-footer p {
+  display: flex;
+  justify-content: center;
+}
+
+.app-footer-img {
+  margin-left: 16px;
+}
+
+/* Transparent Box */
+.main-container .transparent-box {
+  flex: 0 0 auto;
+  position: relative;
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  border-color: transparent;
+  border: 0px solid;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1040px;
+  align-self: center;
+}
+
+/* Header Banner Image */
+img.header-banner-img {
+  width: 1400px;
+  max-width: 100%;
+}
+
+/* Big Screen App Header */
+header.app-header-big-screen {
+  height: 160px;
+}
+
+/* Button Link */
+a.btn-link,
+a.btn-link:hover,
+a.btn-link:active {
+  color: black;
+  font-weight: bold;
+}
+
+/* transparent title */
+.lctt-header .lctt-title {
+  font-size: 25px !important;
+  text-align: justify;
+}
+
+.lctt-header .lctt-description {
+  color: #626262;
+}
+
+.lctt-header a {
+  color: #176448;
+  font-weight: 700;
+}
+
+/* Media Queries */
+@media screen and (max-width: 767px) {
+  .app-header-container {
+    padding: 16px 20px;
+  }
+
+  .main-content {
+    min-height: calc(100vh - 190px);
+  }
+
+  div.ant-layout footer.app-footer {
+    height: 190px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 32px;
+  }
+
+  div.ant-layout footer.app-footer p {
+    display: block;
+  }
+
+  div.ant-layout footer.app-footer p.footer-logo {
+    display: flex !important;
+  }
+
+  .header-banner-wrapper {
+    border-bottom: 6px solid;
+  }
+}
