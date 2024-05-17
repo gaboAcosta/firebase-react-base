@@ -7,16 +7,9 @@ export interface SignupPayload {
 
 class AuthenticationService {
   static async login(accessToken: string) {
-    const headers = {
-      authorization: `Bearer ${accessToken}`,
-    };
-    const response = await axiosInstance.post(
-      endpoints.session,
-      {},
-      {
-        headers,
-      },
-    );
+    const response = await axiosInstance.post(endpoints.session, {
+      id_token: accessToken,
+    });
     return response.data;
   }
   static signup(payload: SignupPayload) {
