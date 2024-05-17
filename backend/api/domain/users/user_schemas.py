@@ -25,7 +25,3 @@ class UserRecord(BaseModel):
     uid: str
     email: str
     email_verified: bool
-
-
-class LoginResult(BaseModel):
-    token: str

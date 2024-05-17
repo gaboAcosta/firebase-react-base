@@ -1,8 +1,6 @@
-from jose import jwt
-from firebase_admin.auth import create_user, get_user, get_user_by_email, EmailAlreadyExistsError, verify_id_token
-from fastapi import HTTPException
-from api.models.user_model import User
-from api.schemas.user_schemas import UserCredentials, UserRecord
+from firebase_admin.auth import get_user, get_user_by_email
+from .user_model import User
+from .user_schemas import UserRecord
 from sqlalchemy.orm import Session
 
 
@@ -40,9 +38,3 @@ class UsersService:
         self.get_or_create_user_in_db(user.uid, user.email)
         return user
 
-    def create_cookie_token(self, user: UserRecord) -> str:
-        return jwt.encode({
-            "email": user.email,
-            "uid": user.uid,
-            "email_verified": user.email_verified
-        }, "secret", algorithm="HS256")

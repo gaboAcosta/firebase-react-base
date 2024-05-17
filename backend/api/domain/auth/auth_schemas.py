@@ -2,5 +2,8 @@ from pydantic import BaseModel
 
 
 class AuthenticationCredentials(BaseModel):
-    email: str
-    password: str
+    id_token: str
+
+
+class AuthenticationResponse(BaseModel):
+    token: str
